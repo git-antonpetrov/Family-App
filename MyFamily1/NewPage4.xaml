@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Myfamily1.NewPage4"
+             Title="Профиль"
+             BackgroundColor="#f0f0f0">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <ScrollView Grid.Row="0">
+            <StackLayout Padding="20" Spacing="15">
+                <Frame BackgroundColor="#2980b9"
+                       CornerRadius="15"
+                       Padding="10"
+                       HasShadow="True">
+                    <StackLayout>
+                        <!-- Фотография профиля -->
+                        <Image Source="PAD.jpg"
+                               HeightRequest="150"
+                               WidthRequest="150"
+                               Aspect="AspectFill"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                               Margin="0,0,0,10"/>
+                        <!-- Имя пользователя -->
+                        <Label Text="Иван"
+                               FontSize="24"
+                               FontAttributes="Bold"
+                               HorizontalOptions="Center"
+                               TextColor="White"/>
+                        <!-- ID пользователя -->
+                        <Label Text="id: 1"
+                               FontSize="18"
+                               HorizontalOptions="Center"
+                               TextColor="White"/>
+                        <!-- Семейный статус -->
+                        <Label Text="Роль: Ребенок"
+                               FontSize="18"
+                               HorizontalOptions="Center"
+                               TextColor="White"/>
+                        <!-- Код семьи -->
+                        <Label Text="Код семьи: 123"
+                               FontSize="18"
+                               HorizontalOptions="Center"
+                               TextColor="White"/>
+                    </StackLayout>
+                </Frame>
+                <!-- Дополнительные сведения о пользователе -->
+                <Frame BackgroundColor="White"
+                       CornerRadius="15"
+                       Padding="15"
+                       HasShadow="True">
+                    <StackLayout>
+                        <!-- Например, информация о друзьях, фотографии и т. д. -->
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+        <!-- Нижнее меню -->
+        <StackLayout Grid.Row="1" Orientation="Horizontal" BackgroundColor="#2980b9">
+            <Button Text="Профиль"
+                    TextColor="White"
+                    BackgroundColor="Transparent"
+                    FontSize="16"
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="ProfileButton_Clicked"/>
+            <Button Text="Чат"
+                    TextColor="White"
+                    BackgroundColor="Transparent"
+                    FontSize="16"
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="ChatButton_Clicked"/>
+            <Button Text="Календарь"
+                    TextColor="White"
+                    BackgroundColor="Transparent"
+                    FontSize="16"
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="CalendarButton_Clicked"/>
+        </StackLayout>
+    </Grid>
+</ContentPage>

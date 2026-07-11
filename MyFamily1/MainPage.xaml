@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Myfamily1.MainPage">
+
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="20">
+        
+        <Image Source="fon.jpeg" HeightRequest="200" Aspect="AspectFit"/>
+
+      
+        <Label Text="Welcome" HorizontalOptions="Center" FontSize="Large"/>
+
+        
+        <Button Text="Вход" Clicked="OnLogInClicked"/>
+
+     
+        <Button Text="Создать семью" Clicked="OnCreateFamilyClicked"/>
+
+        
+        <Button Text="Войти в семью" Clicked="OnJoinFamilyClicked"/>
+    </StackLayout>
+
+</ContentPage>

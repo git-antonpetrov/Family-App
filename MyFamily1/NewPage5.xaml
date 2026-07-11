@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Myfamily1.NewPage5"
+             Title="Чат"
+             BackgroundColor="#f0f0f0">
+    <StackLayout>
+        <!-- Отображение сообщений -->
+        <ListView x:Name="messageListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <!-- Поле для ввода сообщения -->
+        <StackLayout Orientation="Horizontal">
+            <Entry x:Name="messageEntry" Placeholder="Введите сообщение" Margin="10" HorizontalOptions="FillAndExpand"/>
+            <Button Text="Отправить" Clicked="SendMessage_Clicked" Margin="10"/>
+        </StackLayout>
+
+        <!-- Нижнее меню -->
+        <StackLayout Orientation="Horizontal" BackgroundColor="#2980b9" HorizontalOptions="FillAndExpand">
+            <Button Text="Профиль"
+                    TextColor="White"
+                    BackgroundColor="Transparent"
+                    FontSize="16"
+                    HorizontalOptions="FillAndExpand"/>
+            <Button Text="Чат"
+                    TextColor="White"
+                    BackgroundColor="Transparent"
+                    FontSize="16"
+                    HorizontalOptions="FillAndExpand"/>
+            <Button Text="Календарь"
+                    TextColor="White"
+                    BackgroundColor="Transparent"
+                    FontSize="16"
+                    HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

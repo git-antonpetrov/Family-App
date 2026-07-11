@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Myfamily1.NewPage2">
+
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="20" Padding="20">
+        <!-- Изображение -->
+        
+
+        <!-- Надпись "Welcome" -->
+        <Label Text="Создание Семьи" HorizontalOptions="Center" FontSize="Large"/>
+
+        <!-- Поле ввода имени -->
+        <Entry Placeholder="Имя" x:Name="NameEntry"/>
+
+        <!-- Поле ввода email -->
+        <Entry Placeholder="Email" x:Name="EmailEntry" Keyboard="Email"/>
+
+        <!-- Поле ввода пароля -->
+        <Entry Placeholder="Пароль" x:Name="PasswordEntry" IsPassword="True"/>
+
+        <!-- Выпадающий список для выбора роли в семье -->
+        <Picker Title="Роль в семье">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Родитель</x:String>
+                    <x:String>Ребенок</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <!-- Кнопка "Продолжить" -->
+        <Button Text="Продолжить" Clicked="OnContinueClicked"/>
+    </StackLayout>
+
+</ContentPage>
